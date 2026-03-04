@@ -22,6 +22,10 @@ public class MainController extends HttpServlet {
     private static final String WELCOME = "login.html";
     private static final String LOGIN_CONTROLLER = "LoginServlet";
     private static final String SEARCH_LASTNAME_CONTROLLER = "SearchLastnameServlet";
+    private static final String DELETE_PK_CONTROLLER="DeletePkServlet";
+    private static final String UPDATE_PASSROLE_CONTROLLER="UpdatePassRoleServlet";
+    private static final String CREATE_ACCOUNT_CONTROLLER="CreateAccountServlet";
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -46,6 +50,15 @@ public class MainController extends HttpServlet {
                 switch (action){
                     case "Search":
                         url = SEARCH_LASTNAME_CONTROLLER;
+                        break;
+                    case "delete":
+                        url = DELETE_PK_CONTROLLER;
+                        break;
+                    case "update":
+                        url = UPDATE_PASSROLE_CONTROLLER;
+                        break;
+                    case "Create new account":
+                        url = CREATE_ACCOUNT_CONTROLLER;
                         break;
                 }
             }
@@ -98,3 +111,4 @@ public class MainController extends HttpServlet {
     }// </editor-fold>
 
 }
+
